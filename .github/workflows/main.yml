@@ -14,5 +14,6 @@ jobs:
     steps:
       - name: Run a multi-line script
         run: |
+          ls
           docker pull aergus/latex
-          docker run --rm -v $(pwd):/docs aergus/latex /bin/bash -c "cd docs; pdflatex Untitled.tex"
+          docker run --rm -v $(pwd):/docs aergus/latex /bin/bash -c "ls; cd docs; pdflatex Untitled.tex"
